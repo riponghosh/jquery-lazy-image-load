@@ -10,16 +10,25 @@
 	<center>
 		
 		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
-		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
+		<img class="lazy" data-src="images/image.jpg" />
 		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
 	</center>
 
 	<script>
-		$(function() {
-			setTimeout(function(){
-				$('.lazy').lazy();
-			},2000)
-		});
+		// $(function() {
+		// 	setTimeout(function(){
+		// 		$('.lazy').lazy();
+		// 	},2000)
+		// });
+	</script>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) {
+			const imgs = document.querySelectorAll('[data-src]');
+			imgs.forEach(img => {
+		  		img.setAttribute("src", img.getAttribute('data-src'));
+			});
+	  	});
+		
 	</script>
 </body>
 </html>
