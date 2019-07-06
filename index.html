@@ -25,7 +25,9 @@
 		document.addEventListener("DOMContentLoaded", function(event) {
 			const imgs = document.querySelectorAll('[data-src]');
 			imgs.forEach(img => {
-		  		img.setAttribute("src", img.getAttribute('data-src'));
+				setTimeout(function(){
+		  			img.setAttribute("src", img.getAttribute('data-src'));
+				},2000)
 			});
 	  	});
 		
