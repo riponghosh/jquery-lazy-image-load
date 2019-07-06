@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
+</head>
+<body>
+	<center>
+		
+		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
+		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
+		<img class="lazy" src="images/loading.gif" alt="Photo" data-src="images/image.jpg" />
+	</center>
+
+	<script>
+		$(function() {
+			setTimeout(function(){
+				$('.lazy').lazy();
+			},2000)
+		});
+	</script>
+</body>
+</html>
